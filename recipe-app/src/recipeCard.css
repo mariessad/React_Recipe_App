@@ -1,0 +1,14 @@
+.recipeCard {
+}
+
+.recipe-card-label {
+  max-width: 300px;
+  text-align: center;
+  margin: 12px;
+}
+.recipe-card-image {
+  height: 300px;
+  width: 300px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}

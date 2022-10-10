@@ -24,9 +24,17 @@
   border: none;
   border-radius: 0.5rem;
   font-weight: bold;
-  color:rgb(87, 87, 87);
+  color: rgb(87, 87, 87);
 }
 .app-search-button:hover {
   background-color: rgb(67, 190, 67);
   color: white;
+  cursor: pointer;
+}
+
+.app-recipes {
+  display: grid;
+  margin-top: 20px;
+  grid-template-columns: 330px 330px;
+  align-items: baseline;
 }
