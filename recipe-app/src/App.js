@@ -3,6 +3,7 @@ import Axios from "axios";
 import { useState, useEffect } from "react";
 import RecipeCard from "./RecipeCard";
 import plate from "./plate-logo.png";
+import Favorites from "./Favorites";
 
 function App() {
   const [query, setQuery] = useState("");
@@ -49,9 +50,8 @@ function App() {
         />
         <input className="app-search-button" type="submit" value="Search" />
         <select className="app-healthLables">
-          <option onClick={() => setHealth("")}>none</option>
-          <option onClick={() => setHealth("vegetarian")}>Vegan</option>
-          <option onClick={() => setHealth("vegan")}>Vegetarian</option>
+          <option onClick={() => setHealth("vegan")}>Vegan</option>
+          <option onClick={() => setHealth("vegetarian")}>Vegetarian</option>
           <option onClick={() => setHealth("paleo")}>Paleo</option>
           <option onClick={() => setHealth("dairy-free")}>Dairy-free</option>
           <option onClick={() => setHealth("gluten-free")}>Gluten-free</option>
@@ -67,6 +67,7 @@ function App() {
           return <RecipeCard recipe={recipe} />;
         })}
       </div>
+      <Favorites/>
     </div>
   );
 }
