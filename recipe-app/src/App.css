@@ -1,4 +1,4 @@
-*{
+* {
   margin: 0;
   padding: 0;
 }
@@ -9,14 +9,24 @@
   align-items: center;
   padding: 40px 20px;
 }
-header{
-width: 100vw;
-height: 120px;
-background-color:rgb(0, 223, 100);
-text-align: center;
+header {
+  width: 100vw;
+  height: 120px;
+  background-color: rgb(0, 223, 100);
+  text-align: center;
 }
-h1{
+h1 {
   color: white;
+}
+
+body {
+  background-image: url("/src/food-bg-1.png");
+  /* background-position: center; */
+  background-position-x: center;
+  background-position-y: -60%;
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-blend-mode: lighten;
 }
 .app-search-form {
   margin-top: 1rem;
@@ -27,12 +37,14 @@ h1{
   min-width: 200px;
   max-width: 100vw;
   font-size: 15px;
+  border-color: rgb(0, 204, 0);
+  border-radius: .5rem;
 }
 .app-search-button {
   padding: 9px 16px;
   font-size: 15px;
   margin-left: 7px;
-  background-color: rgb(121, 255, 121);
+  background-color: rgb(255, 187, 97);
   border: none;
   border-radius: 0.5rem;
   font-weight: bold;
@@ -51,24 +63,23 @@ h1{
   align-items: baseline;
 }
 
-.app-healthLables{
+.app-healthLables {
   padding: 7px 8px;
   margin-left: 6px;
-  border-radius: .5rem;
-
+  border-radius: 0.5rem;
 }
 
-a{
+a {
   text-decoration: none;
   color: green;
   font-size: 15px;
 }
 
-a:hover{
+a:hover {
   color: black;
 }
 
-.plate-logo{
+.plate-logo {
   width: 60px;
   height: auto;
 }
