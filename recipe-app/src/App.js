@@ -9,6 +9,8 @@ function App() {
   const [query, setQuery] = useState("");
   const [recipes, setRecipes] = useState([]);
   const [health, setHealth] = useState("vegan");
+  const [fav, setFav] = useState([]);
+  const [heart, setHeart] = useState(true);
 
   useEffect(() => {
     console.log("render");
@@ -29,6 +31,18 @@ function App() {
     e.preventDefault();
     getRecipies();
   };
+ 
+// fav function
+  function toggleHeart(recipe) {
+    console.log("clicked", recipe);
+    // console.log(fav)
+    setHeart(!heart);
+    if(heart === true){
+        setFav(recipe["recipe"])
+        console.log("heart is true", fav)
+    }
+  }
+
   return (
     <div className="App">
       <header>
@@ -64,10 +78,10 @@ function App() {
 
       <div className="app-recipes">
         {recipes.map((recipe) => {
-          return <RecipeCard recipe={recipe} />;
+          return <RecipeCard recipe={recipe} toggleHeart={toggleHeart} heart={heart}/>;
         })}
       </div>
-      <Favorites/>
+      <Favorites recipes={recipes}/>
     </div>
   );
 }

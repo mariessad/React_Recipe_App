@@ -4,23 +4,23 @@ import "./recipeCard.css";
 import heartEmpty from "./heart-empty.png";
 import heartFull from "./heart-full.png";
 
-export default function RecipeCard({ recipe }) {
-  const [fav, setFav] = useState([]);
-  const [heart, setHeart] = useState(true);
+export default function RecipeCard({ recipe, toggleHeart, heart }) {
+//   const [fav, setFav] = useState([]);
+//   const [heart, setHeart] = useState(true);
+// console.log(recipe)
 
-//   const { label, url, image, totalTime } = recipe;
-
-  function toggleHeart(recipe) {
-    console.log("clicked", recipe);
-    // setFav((recipe[recipe]))
-    // console.log(fav)
-    setHeart(!heart);
-    if(heart === true){
-        setFav(recipe["recipe"])
-        console.log("heart is true", fav)
-    }
-  }
+//   function toggleHeart(recipe) {
+//     console.log("clicked", recipe);
+//     // setFav((recipe[recipe]))
+//     // console.log(fav)
+//     setHeart(!heart);
+//     if(heart === true){
+//         setFav(recipe["recipe"])
+//         console.log("heart is true", fav)
+//     }
+//   }
   return (
+    <>
     <div className="recipeCard">
       <a href={recipe["recipe"]["url"]}>
         <p className="recipe-card-label">{recipe["recipe"]["label"]}</p>
@@ -35,6 +35,8 @@ export default function RecipeCard({ recipe }) {
           src={heart ? heartEmpty : heartFull}
         />
       </p>
+      
     </div>
+    </>
   );
 }
